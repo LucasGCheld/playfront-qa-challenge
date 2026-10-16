@@ -1,0 +1,29 @@
+{
+  "name": "playfront-qa-challenge",
+  "version": "1.0.0",
+  "description": "Engenharia de Qualidade Front Web — Playwright Practice Arena",
+  "license": "MIT",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:ui": "npx playwright test --ui",
+    "test:debug": "npx playwright test --debug",
+    "test:report": "npx playwright show-report",
+    "test:watch": "npx playwright test --watch",
+    "codegen": "npx playwright codegen",
+    "install-browsers": "npx playwright install"
+  },
+  "dependencies": {
+    "@playwright/test": "^1.40.0",
+    "@playwright/test-axe": "^0.1.0",
+    "axe-playwright": "^2.0.1",
+    "chalk": "^5.3.0",
+    "dotenv": "^16.4.0",
+    "tsx": "^4.9.0"
+  },
+  "devDependencies": {
+    "@types/chalk": "^2.2.0",
+    "@types/node": "^20.12.0",
+    "prettier": "^3.2.0",
+    "typescript": "^5.4.0"
+  }
+}
