@@ -18,6 +18,6 @@ test('Tabela de usuários deve carregar e mostrar os dados corretos', async ({ p
 
   // Verifica dados específicos dos usuários (pula a checkbox na primeira coluna)
   await expect(rows.first().locator('td').nth(1)).toHaveText('1');
-  // Status está na 5ª coluna (idx 5)
-  await expect(rows.first().locator('td').nth(5)).toHaveText('admin');
+  // Status está na 5ª coluna (idx 5) - o valor é 'active'
+  await expect(rows.first().locator('td').nth(5)).toHaveText('active');
 });

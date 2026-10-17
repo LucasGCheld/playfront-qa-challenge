@@ -6,10 +6,9 @@ test('Acessibilidade da página principal deve atender a requisitos básicos', a
   // Aguarda a página ser totalmente carregada
   await page.waitForLoadState('domcontentloaded');
 
-  // Verifica que elementos principais têm nomes acessíveis
-  const buttons = page.locator('button:not([disabled])');
-  await expect(buttons.first()).toBeVisible();
-
-  // Verifica que o botão de cadastro está visível (elemento interativo real)
-  await expect(page.getByTestId('btn-register')).toBeVisible();
+  // Verifica que o botão de cadastro está visível e tem label
+  const registerButton = page.getByTestId('btn-register');
+  await expect(registerButton).toBeVisible();
+  await expect(registerButton).toHaveClass(/btn-primary/);
+  await expect(registerButton).toHaveAttribute('type', 'submit');
 });

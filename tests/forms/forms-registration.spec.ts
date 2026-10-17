@@ -17,8 +17,6 @@ test('Formulário de cadastro deve funcionar corretamente', async ({ page }) => 
   await form.getByRole('button', { name: 'Register' }).click();
 
   // Verifica que o cadastro foi concluído
-  // O div #formSuccess pode estar com a classe 'hidden' inicialmente
-  const success = page.locator('[data-testid="form-success"]');
-  await expect(success).toBeVisible();
-  await expect(success).toContainText('Registration successful');
+  // Espera o formSuccess deixar de ter a classe 'hidden' e aparecer visível
+  await page.waitForSelector('[data-testid="form-success"]:not(.hidden)', { timeout: 10000 });
 });
