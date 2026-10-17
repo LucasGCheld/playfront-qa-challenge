@@ -5,25 +5,25 @@
 | ID | Aspecto | Decisão |
 |---|---|---|
 | MAT-01 | Métrica de risco | Usa um score de 1–3 (risco + impacto) para justificar prioridade |
-| MAT-02 | Tamanho da suíte | 7 testes automatizados incluindo pipeline |
+|| MAT-02 | Tamanho da suíte | 6 testes automatizados + 1 pipeline (total 7 itens, dentro do requisito 5–8) |
 | MAT-03 | Critério de automação | Sim/Não com justificativa clara para cada cenário |
-| MAT-04 | Tipo de teste | Unitário de integração E2E, conforme Playwright |
+| MAT-04 | Tipo de teste | E2E (End-to-End) com Playwright, conforme case |
 
 ## 2. Identificação de riscos
 
 | ID | Jornada | Cenário | Tipo | Risco | Impacto | Prioridade |
 |---|---|---|---|---|---|---|
-| R-01 | Tabela de usuários | Carregamento rápido | Funo | Alta | Alt | P0 |
-| R-02 | Tabela de usuários | Tamanho da tabela | Comp | Médio | Méd | P1 |
-| R-03 | Tabela de usuários | Ação disponível | Func | Alta | Alt | P0 |
-| R-04 | Tabela de usuários | Estado de vazio | Comp | Médio | Méd | P2 |
-| R-05 | Formulário | Submit válido | Func | Alta | Alt | P0 |
-| R-06 | Formulário | Mensagem de erro | Func | Médio | Alt | P0 |
-| R-07 | Tipo assíncrono | Dropdown não carregou | Comp | Alto | Alt | P1 |
-| R-08 | Tipo assíncrono | Estado loading | UX | Médio | Méd | P1 |
-| R-09 | Cenário negativo | Busca por usuário inexistente | Func | Médio | Alt | P1 |
+|| R-01 | Tabela de usuários | Carregamento e renderização da tabela | Funcional | Alta | Alto | P0 |
+| R-02 | Tabela de usuários | Pesquisa e ordenação | Funcional | Médio | Alto | P0 |
+|| R-03 | Tabela de usuários | Ação disponível | Funcional | Alta | Alto | P0 |
+| R-04 | Tabela de usuários | Estado vazio de resultados | Comportamental | Médio | Médio | P2 |
+| R-05 | Formulário | Cadastrar usuário com dados válidos | Funcional | Alta | Alto | P0 |
+| R-06 | Formulário | Validar mensagem de erro | Funcional | Médio | Alto | P0 |
+| R-07 | Tipo assíncrono | Dropdown não carregou | Comportamental | Alto | Alt | P1 |
+| R-08 | Tipo assíncrono | Estado loading | Comportamental | Médio | Méd | P1 |
+| R-09 | Cenário negativo | Busca por usuário inexistente | Funcional | Médio | Alto | P1 |
 | R-10 | Paginador | Página não retorna | Comp | Baixo | Baixo | P2 |
-| R-11 | Acessibilidade | Labels ausentes | UX | Médio | Alto | P1 |
+| R-10 | Acessibilidade | Labels ausentes dos campos | Acessível | Médio | Alto | P1 |
 | R-12 | Mobile | Layout superposto | UX | Médio | Alto | P1 |
 
 ## 3. Matriz de cenários
