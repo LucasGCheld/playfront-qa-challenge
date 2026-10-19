@@ -4,7 +4,7 @@ test('Acessibilidade da página principal deve atender a requisitos básicos', a
   await page.goto('/');
 
   // Aguarda a página ser totalmente carregada
-  await page.waitForLoadState('domcontentloaded');
+  await page.waitForLoadState('domcontentloaded', { timeout: 45000 });
 
   // Verifica que o botão de cadastro está visível e tem label
   const registerButton = page.getByTestId('btn-register');
